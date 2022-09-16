@@ -1,23 +1,40 @@
+*{
+    margin: 8px;
+}
+
 body{
-    background: wheat;
-    font: normal 18pt italic;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+section{
+
+    width: 500px;
+    height: 500px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    display: flex;
+    background: lightskyblue;
+    display: flex;
+    flex-direction: row;
+    
+    
 }
 
 header{
+
+    border: rgb(228, 153, 15);
     text-align: center;
 }
 
-section{
-    background: lightyellow;
-    margin: auto;
-    width: 500px;
-    border-radius: 10px;
-    box-shadow: 15px 10px 5px rgba(22, 22, 7, 0.267);
-    padding: 15px;
+div#horaDev{
 
-}
-
-footer{
+    border: 1px solid rgb(7, 1, 1);
+    color: rgb(6, 1, 1);
+    font-size: 48pt;
     text-align: center;
-    font: normal 16pt italic;
+   
 }

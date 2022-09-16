@@ -1,26 +1,31 @@
-function carregar() {
-    var divtitulo = document.getElementById('divt')
-    var diveH = document.getElementById('divhora')
-    var divI = document.getElementById('diveimage')
-    var hora = new Date()
-    var horario = hora.getHours()
-    var min = new Date()
-    var minutos = min.getMinutes()
+clicou = () =>{
 
-    
-    
-    if (horario>0 && horario <=12) {
-        divI.src = './imagemdia.svg'
-        divtitulo.innerHTML= `A hora certa é: ${horario}:${minutos}`
-        document.body.style.background = 'lightyellow'
+  document.getElementById('horaDev').innerHTML 
 
-    }else if (horario>12 && horario <=18) {
-        divI.src = './novaimtarde.svg'
-        divtitulo.innerHTML= `A hora certa é: ${horario}:${minutos}`
-        document.body.style.background = 'lightyellow'
-    }else{
-        divI.src = './imagemnoite.svg'
-        divtitulo.innerHTML= `A hora certa é: ${horario}:${minutos}`
-        document.body.style.background = 'lightyellow'
+  tempo = setInterval(() => {
+    
+  hora = new
+  Date().toLocaleTimeString()
+
+  parseInt(hora) + 1
+  document.getElementById('horaDev').innerHTML = hora
+
+ trocarManha()
+  
+  }, 1000);
+  
+  hora = 9
+
+  let img = document.getElementById('imagem')
+
+    if (hora>5 && hora<=12) {
+        img.src = './azul.svg'
+        document.body.style.background = 'lightskyblue'
+    }if (hora>12 && hora<=18) {
+        img.src = './tarde.svg'
+        document.body.style.background = ' rgb(152, 130, 241)'
+    }else if (hora>18 && hora<5) {
+        img.src = './vermelho.svg'
     }
+
 }
