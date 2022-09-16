@@ -9,23 +9,33 @@ clicou = () =>{
 
   parseInt(hora) + 1
   document.getElementById('horaDev').innerHTML = hora
-
- trocarManha()
-  
+ 
   }, 1000);
   
-  hora = 9
+  
+}
 
-  let img = document.getElementById('imagem')
+mudarBackground = () =>{
 
-    if (hora>5 && hora<=12) {
+    
+    let momento = new Date()
+    let momentaneo = momento.getHours()
+    
+
+    let img = document.getElementById('imagem')
+
+    if (momentaneo>5 && momentaneo<=12) {
         img.src = './azul.svg'
         document.body.style.background = 'lightskyblue'
-    }if (hora>12 && hora<=18) {
+    }if (momentaneo>12 && momentaneo<=18) {
         img.src = './tarde.svg'
         document.body.style.background = ' rgb(152, 130, 241)'
-    }else if (hora>18 && hora<5) {
+    }else if (momentaneo>18 && momentaneo<5) {
         img.src = './vermelho.svg'
     }
 
-}
+    
+  }
+  
+  mudarBackground()
+  
